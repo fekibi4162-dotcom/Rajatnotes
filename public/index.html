@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rajatnotes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Cloud note-taking starter</p>
+        <h1>Keep every idea private, searchable, and synced.</h1>
+        <p>Rajatnotes lets you create an account, sign in from any browser, and manage notes that are tied only to your user account.</p>
+      </section>
+
+      <section id="auth" class="card auth-card">
+        <div class="tabs" role="tablist" aria-label="Authentication forms">
+          <button class="tab active" data-mode="login">Log in</button>
+          <button class="tab" data-mode="signup">Sign up</button>
+        </div>
+        <form id="auth-form">
+          <label class="signup-only hidden">Name<input name="name" autocomplete="name" /></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" minlength="8" required /></label>
+          <button type="submit" class="primary">Continue</button>
+        </form>
+        <p id="auth-message" class="message" role="status"></p>
+      </section>
+
+      <section id="app" class="hidden">
+        <div class="toolbar">
+          <div><p class="eyebrow">Dashboard</p><h2 id="welcome">Your notes</h2></div>
+          <button id="logout" class="ghost">Log out</button>
+        </div>
+        <form id="note-form" class="card note-form">
+          <input name="title" placeholder="Note title" maxlength="120" />
+          <textarea name="content" placeholder="Write your note..." rows="5"></textarea>
+          <button type="submit" class="primary">Save note</button>
+        </form>
+        <label class="search">Search notes<input id="search" placeholder="Search by title or content" /></label>
+        <div id="notes" class="notes"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "rajatnotes",
+  "version": "1.0.0",
+  "description": "A simple private note-taking web app with email/password accounts and persistent notes.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
